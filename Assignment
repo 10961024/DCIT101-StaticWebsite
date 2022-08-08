@@ -1,0 +1,51 @@
+
+Q1.. import java.util.Scanner;
+
+public class PrimeSum {
+
+        public static void main(String[] args){
+            Scanner sc=new Scanner(System.in);
+
+            int i,num,count, sum=0;
+            System.out.println("Please Enter maximum value: ");
+            int maxValue=sc.nextInt();
+
+            System.out.println("Sum of Prime numbers between 1 and "+maxValue+" are : ");
+
+            for(num=1; num<=maxValue; num++){
+                count=0;
+                for(i=2; i<=num/2; i++){
+                    if(num%i==0){
+                        count++;
+                        break;
+                    }
+                }
+                if(count==0 && num !=1){
+                    sum+=num;
+                }
+            }
+            System.out.println(sum);
+        }
+
+}
+
+Q2..#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int sum = 0, number_of_even = 0;
+
+for(int a = 1; a < 10000; i++)
+
+if((i % 2) == 0){
+    sum = sum + a;
+    number_of_even++;
+}
+double avg = sum/number_of_even;
+cout << "The average of all even numbers between 1 and 10000 is ";
+cout << avg;
+
+return 0;
+}
